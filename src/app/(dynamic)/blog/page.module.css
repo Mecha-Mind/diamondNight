@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-bottom: 2px solid #333;
+  padding: 20px 0;
+}
+.imageContainer {
+  width: 100%;
+}
+.image {
+  object-fit: cover;
+}
+.content {
+  text-align: center;
+}
+.title {
+  margin-bottom: 30px;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 992px) {
+  .container {
+    flex-direction: row;
+  }
+  .content {
+    text-align: left;
+  }
+}

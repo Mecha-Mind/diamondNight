@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 20px;
+  justify-content: space-between;
+  z-index: 90;
+}
+
+
+.links {
+  display: none;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 992px){
+  .links {
+    display: flex;
+  }
+}

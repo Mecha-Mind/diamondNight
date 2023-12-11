@@ -1,0 +1,17 @@
+
+.container {
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 16px;
+  color: #a8a8a8;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  background-color: #0d492b;
+  transition: .4s;
+  cursor: pointer;
+}
+.container:hover {
+  background-color: #12643b;
+}
