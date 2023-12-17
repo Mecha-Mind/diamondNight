@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './footer.module.css'
 import socialIcons from './data'
 import Link from 'next/link'
+
 const Footer = () => {
   return (
     <footer className={styles.footer} id='footer'>
@@ -17,4 +18,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

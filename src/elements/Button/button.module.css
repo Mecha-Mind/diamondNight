@@ -1,6 +1,6 @@
 
 .container {
-  width: 120px;
+  width: fit-content;
   border: none;
   border-radius: 5px;
   padding: 10px 16px;

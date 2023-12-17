@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Image from 'next/image';
 
@@ -6,9 +7,7 @@ async function getData(postId) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, { cache: 'no-store' });
 
   if (!res.ok) {
-    // Handle error gracefully
-    // Throw an error with a more descriptive message
-    throw new Error(`Failed fetching data for post ID: ${postId}`);
+    return notFound()
   }
   return res.json();
 }
