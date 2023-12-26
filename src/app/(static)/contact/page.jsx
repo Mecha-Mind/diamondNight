@@ -27,8 +27,12 @@ const Contact = () => {
           />
         </div>
         <form className={styles.form} id={styles.contacts} name={styles.contact}>
-          <input type="text" placeholder='name' className={styles.input} />
-          <input type="email" placeholder='email' className={styles.input} />
+          <div className={styles.inputs}>
+            <input type="text" placeholder='name' className={styles.input} />
+            <input type="email" placeholder='email' className={styles.input} />
+            <input type="text" placeholder='number' className={styles.input} />
+            <input type="text" placeholder='subject' className={styles.input} />
+          </div>
           <textarea className={styles.textArea} placeholder='message' cols="30" rows="10"></textarea>
           <ContactButton/>
         </form>

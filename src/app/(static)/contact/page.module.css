@@ -40,20 +40,28 @@
 }
 
 .form {
-  /* flex: 1; */
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+.form .inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
 .input, .textArea {
+  width: 100%;
   padding: 20px;
   font-weight: bold;
-  font-size: 20px;
   color: #bbb;
   border: none;
   outline: none;
-  border: 3px solid #bbb;
+  border: 1px solid #bbb;
+  border-radius: 8px;
   background-color: transparent;
 }
 
