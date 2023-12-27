@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={bodyFont.className}>
         <ThemeProvider>
-          <div className="container">
+          <main className="container">
             <Navbar />
             {children}
             <Footer />
-          </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>

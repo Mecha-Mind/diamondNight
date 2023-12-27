@@ -3,10 +3,10 @@ import styles from './page.module.css'
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <section className={styles.container}>
       <h1 className={styles.mainTitle}>Our Work</h1>
       {children}
-    </div>
+    </section>
   )
 }
 

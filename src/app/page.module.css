@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
 }
 
 

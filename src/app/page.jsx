@@ -5,7 +5,7 @@ import Button from '@/elements/Button/Button'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       {/* text side */}
       <div className={styles.textSide}>
         <h1 className={styles.title}>Better design for your digital products.</h1>
@@ -17,6 +17,6 @@ export default function Home() {
       <div className={styles.imageSide}>
         <Image src={Hero} alt='Hero' className={styles.img} priority></Image>
       </div>
-    </div>
+    </section>
   )
 }

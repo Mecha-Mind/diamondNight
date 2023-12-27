@@ -9,7 +9,7 @@ export const metadata = {
 
 const Portfolio = () => {
   return (
-    <section className={styles.container}>
+    <div>
       <h1 className={styles.selectTitle}>Choose a gallery</h1>
       <div className={styles.items}>
         <Link 
@@ -23,7 +23,7 @@ const Portfolio = () => {
           <span className={styles.title}>Applications</span>
         </Link>
       </div>
-    </section>
+    </div>
   )
 }
 
