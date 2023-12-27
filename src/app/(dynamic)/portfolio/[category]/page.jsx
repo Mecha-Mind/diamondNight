@@ -22,24 +22,23 @@ const Category = ({params}) => {
     <div className={styles.container}>
       <h1 className={styles.catTitle}>{params.category}</h1>
       {data.map(item=>(
-
         <div className={styles.item} key={item.id}>
-        <div className={styles.content}>
-          <h1 className={styles.title}>{item.title}</h1>
-          <p className={styles.desc}>{item.desc}</p>
-          <Button url="/portfolio" title="See More.." />
+          <div className={styles.content}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.desc}>{item.desc}</p>
+            <Button url="/portfolio" title="See More.." />
+          </div>
+          <div className={styles.imgContainer}>
+            <Image
+              src={item.image}
+              alt="Category Image"
+              className={styles.img}
+              width={500}
+              height={400}
+              priority
+              />
+          </div>
         </div>
-        <div className={styles.imgContainer}>
-          <Image
-            src={item.image}
-            alt="Category Image"
-            fill={true}
-            className={styles.img}
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 800px"
-            priority
-            />
-        </div>
-      </div>
       ))}
     </div>
   )
