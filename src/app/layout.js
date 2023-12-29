@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import ScrollToTop from "@/elements/ScrollToTop/ScrollToTop";
 
 const bodyFont = Inter({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
           <main className="container">
             <Navbar />
             {children}
+            <ScrollToTop />
             <Footer />
           </main>
         </ThemeProvider>

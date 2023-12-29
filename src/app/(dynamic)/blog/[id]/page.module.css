@@ -1,7 +1,15 @@
 .top {
   display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
   gap: 20px;
   margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  .top {
+    flex-direction: row;
+  }
 }
 .title {
   font-size: 22px;
@@ -9,7 +17,7 @@
   margin-bottom: 30px;
 }
 .desc {
-  width: 600px;
+  max-width: 600px;
 }
 .author {
   display: flex;
@@ -24,12 +32,13 @@
 
 .imageContainer{
   flex: 1;
-  height: 300px;
+  max-height: 300px;
   position: relative;
   overflow: hidden;
 }
 .image {
   object-fit: cover;
+  max-width: 100%;
 }
 
 .content {

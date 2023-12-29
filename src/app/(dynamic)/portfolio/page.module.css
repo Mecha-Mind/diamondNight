@@ -1,10 +1,10 @@
 .container {
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 170px);
 }
 
 .mainTitle {
   font-size: 62px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .items {
@@ -15,10 +15,6 @@
   gap: 50px;
 }
 @media (min-width: 992px) {
-  .mainTitle {
-    font-size: 90px;
-    margin-bottom: 20px;
-  }
 
   .items {
     flex-direction: row;

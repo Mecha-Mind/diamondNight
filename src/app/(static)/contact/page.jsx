@@ -32,7 +32,7 @@ const Contact = () => {
             <input type="text" placeholder='number' className={styles.input} />
             <input type="text" placeholder='subject' className={styles.input} />
           </div>
-          <textarea className={styles.textArea} placeholder='message' cols="30" rows="10"></textarea>
+          <textarea className={styles.textArea} placeholder='message' cols="20" rows="3"></textarea>
           <ContactButton/>
         </form>
       </div>

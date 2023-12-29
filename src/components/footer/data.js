@@ -6,8 +6,8 @@ const socialIcons = [
   },
   {
     id: 2,
-    name: "youtube",
-    url: "https://youtube.com",
+    name: "linkedin",
+    url: "https://linkedin.com",
   },
   {
     id: 3,
@@ -18,6 +18,11 @@ const socialIcons = [
     id: 4,
     name: "twitter",
     url: "https://twitter.com",
+  },
+  {
+    id: 5,
+    name: "whatsapp",
+    url: "https://whatsapp.com",
   },
 ];
 
