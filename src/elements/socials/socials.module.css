@@ -1,0 +1,34 @@
+.social {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.social li {
+
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+.social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  color: #b8b8b8;
+  transition: 0.4s;
+
+}
+.social li a:hover {
+  color:#ffffff;
+}
+
+/* facebook icon reduce size */
+.social  svg {
+  width: 25px;
+  height: 25px;
+}

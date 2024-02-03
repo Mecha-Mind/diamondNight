@@ -1,0 +1,60 @@
+.landing {
+  height: calc(100vh + 70px);
+  position: relative;
+}
+
+.landing .wrapper  {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.landing .wrapper img{
+  object-fit: cover;
+}
+.landing .wrapper .content{
+  position: absolute;
+  left: 12%;
+  top:40%;
+  width: 500px;
+  max-width: 80%;
+  box-shadow: 0 0 10px;
+  padding: 30px  15px;
+  border-radius: 8px;
+}
+.landing .wrapper .content h2 {
+  font-size: 48px;
+  margin-bottom: 30px ;
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.wrapper h2,
+.wrapper p{
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+.wrapper h2 {
+  animation-delay: 1s;
+}
+.wrapper p {
+  animation-delay: 1.7s;
+}
+
+
+.wrapper .landingSocials {
+  position: absolute;
+    top: 28%;
+    left: 11%;
+    padding: 30px;
+}

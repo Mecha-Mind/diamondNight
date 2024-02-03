@@ -1,28 +1,23 @@
 const links = [
   {
     id: 1,
-    title: "Home",
-    url: "/",
+    title: "Services",
+    url: "/services",
   },
   {
     id: 2,
-    title: "Portfolio",
-    url: "/portfolio",
-  },
-  {
-    id: 3,
     title: "Blog",
     url: "/blog",
   },
   {
-    id: 4,
-    title: "About",
-    url: "/about",
-  },
-  {
-    id: 5,
+    id: 3,
     title: "Contact",
     url: "/contact",
+  },
+  {
+    id: 4,
+    title: "about",
+    url: "/about",
   },
 ];
 

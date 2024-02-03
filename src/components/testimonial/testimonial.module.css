@@ -1,0 +1,53 @@
+/* styles/Testimonial.module.css */
+.testimonialSection {
+  background-color: #eee;
+  min-height: 500px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.testimonial {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center; /* Center the content */
+  position: absolute; /* Position each testimonial absolutely */
+  top: 50%;
+  color: #000;
+  background-color: #607d8b;
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px;
+  height: 180px;
+  margin-bottom: 30px;
+}
+
+.testimonial h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 14px;
+  color: #eee
+}
+
+@media (min-width: 991px) {
+  .testimonial {
+    width: 500px;
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}

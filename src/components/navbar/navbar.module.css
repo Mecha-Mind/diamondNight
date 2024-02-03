@@ -1,21 +1,78 @@
+.header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  background-color: #4e4e4e1e;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition: background-color 0.3s ease;  /* Add transition property for smooth background color change */
+}
 
+/* Add a new class for the scrolling effect */
+.header.scrolling {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: #2a2a3a94;  /* Change the background color when scrolling */
+}
+
+/* Add styles for the container */
 .container {
-  height: 60px;
+  position: relative;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 90;
 }
 
-
-.links {
-  display: none;
+.header nav {
+  display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
-@media (min-width: 992px){
-  .links {
+/* Add styles for the navLinks */
+.header nav .navLinks {
+  display: none;
+}
+
+.header nav .navLinks a {
+  font-size: 18px;
+  color: #fff;
+}
+.header nav .menuIcon {
+  display: flex;
+  color: #fff;
+  height: 1rem;
+  transition: .4s;
+}
+/* Add styles for the navLinks in larger screens */
+@media (min-width: 768px) {
+  .header nav .navLinks {
     display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header nav .menuIcon {
+    display: none;
+  }
+}
+
+/* Add media query for smaller screens (max-width: 767px) */
+@media (max-width: 767px) {
+  .header nav .navLinks.show {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    height: 273px;
+    width: 100%;
+    background-color: #19191ab0;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
 }

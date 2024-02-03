@@ -1,0 +1,86 @@
+/* infiniteScrollAnimation.module.css */
+.infiniteScrollAnimation {
+  display: grid;
+  place-content: center;
+  font-family: system-ui;
+  font-size: 1.125rem;
+}
+
+.scroller {
+  width: 100%; /* Set width to 100% for full screen */
+  margin: 0 auto; /* Center the scroller */
+}
+
+.scrollerInner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scrollerInner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+    background: #ccc;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+
+
+.tagList li {
+  width: 260px;
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+.tagList li h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.tagList li p {
+  font-size: 18px;
+  font-weight: normal;
+  color: #333;
+}
+
+.centered {
+  text-align: center;
+}
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}

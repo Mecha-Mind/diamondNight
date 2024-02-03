@@ -1,44 +1,88 @@
 .footer {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1rem auto 0;
-  padding: 10px 0;
-  border-top: 2px solid #ffffff20;
-  position: relative;
-  bottom: 0;
-  left: 0;
+  background-color: #191919;
+  margin-top: 60px;
+  padding-top: 60px;
+  font-size: 14px;
 }
 
-.text {
-  font-size: 12px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  color: #888;
+  gap: 20px;
 }
-@media (min-width: 991px) {
-  .text {
-    font-size:18px;
+
+.box {
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* Second box */
+.box .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box .links li a {
+  color: #b8b8b8;
+  transition: 0.4s;
+}
+.box .links li a:hover {
+  color:#ebebeb;
+  letter-spacing: 1.1px;
+}
+
+/* Third box */
+
+.box .line {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+
+.box .line svg {
+  width: 20px;
+  height: 20px;
+}
+
+.box .line .phoneIcon {width:20px}
+.box .line .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* copyright */
+.footer .copy {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #ddd;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .footer .copy{
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
-
-.socials {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+.footer .copyright {
+  padding: 5px;
+  text-align: center;
 }
-
-
-
-.social {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  cursor: pointer;
-  opacity: .6;
-  transition: .3s;
-}
-.social:hover {
-  opacity: 1;
+.footer .copyright span {
+  font-size: 18px;
+  color: red;
 }

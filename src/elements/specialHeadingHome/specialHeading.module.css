@@ -1,0 +1,28 @@
+.specialHeading {
+  margin-bottom: 50px;
+}
+
+.special-h {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  color: #cdcdcd;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.special-h + p {
+  text-align: center;
+  color: #646464;
+  margin: -90px 0 0;
+  font-size: 24px;
+}
+
+@media (min-width: 991px) {
+  .special-h {
+    font-size: 60px;
+  }
+  .special-h + p {
+    margin: -110px 0 0;
+    font-size: 20px;
+  }
+}

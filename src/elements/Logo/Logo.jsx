@@ -1,16 +1,13 @@
-import React from 'react'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGem } from '@fortawesome/free-solid-svg-icons'
 import styles from './logo.module.css'
-import { Inter } from "next/font/google";
-const inter = Inter(
-  { 
-    subsets: ["latin"],
-    weight : ['800'],
-  }
-  );
+
 const Logo = () => {
   return (
-    <Link href="/" className={`${styles.logo} ${inter.className}`}>Diamond Night</Link>
+    <Link href="/" className={`${styles.logo}`}>
+      <FontAwesomeIcon icon={faGem} className={styles.linkSvg}/> Diamond Night
+    </Link>
   )
 }
 

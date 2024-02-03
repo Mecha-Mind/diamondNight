@@ -1,18 +1,20 @@
 "use client"
 
 import React, { useContext } from 'react'
-import './darkMode.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import styles from './darkMode.module.css'
 import { ThemeContext } from '@/context/ThemeContext'
 const DarkMode = () => {
   const {toggle, mode} = useContext(ThemeContext);
   return (
     <div className={styles.mainContainer} onClick={toggle}>
-      <div className={styles.icon}>🌙</div>
-      <div className={styles.icon}>🌞</div>
-      <div className={styles.ball}
-        style={mode==="light"?{left:"2px"}:{right:"2px"}}
-      />
+      {mode === 'light' ? (
+        <FontAwesomeIcon icon={faMoon} className={styles.icon} />
+      ) : (
+        <FontAwesomeIcon icon={faSun} className={styles.icon} />
+      )}
+      
     </div>
   )
 }

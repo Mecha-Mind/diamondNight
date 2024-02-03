@@ -1,13 +1,49 @@
+
+.loading {
+  height: 100dvh;
+  background-color: red;
+  font-size: 100px;
+}
+
+:root {
+  --btnColor: #4db5ff;
+  --mainColor: #3E1F47;
+  --secColor: #272640;
+  --paddColor: #1B3A4B;
+  --longPaddColor: #0B525B;
+  --mainTransition: .4s;
+}
+
+
 * {
   box-sizing: border-box;
-  padding: 0;
+  padding: 0; 
   margin: 0;
 }
+
+
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/* Components */
+
+
+
+.mainContainer {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -16,6 +52,11 @@ a {
 
 ul {
   list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .theme {
@@ -27,9 +68,6 @@ ul {
   color: #111;
 }
 
-.light a {
-  color: #111;
-}
 
 
 .dark {
@@ -37,28 +75,38 @@ ul {
   color: #bbb;
 }
 
-.dark a {
-  color: #fff;
-}
+
+
 
 .container {
   max-width: 1366px;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 0 40px;
 
 }
 
 section {
-  margin-top: 30px;
+  margin-block: 30px;
+  padding-block: 30px;
+  flex:1;
+  overflow: hidden;
 }
 
-/* framework */
 
-.relative {
-  position: relative;
+/* media queries */
+
+@media (min-width: 768px) and (max-width: 991px){
+  .container{ 
+    width: 750px;
+  }
 }
-
-.absolute {
-  position: absolute;
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container{ 
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container{ 
+    width: 1170px;
+  }
 }

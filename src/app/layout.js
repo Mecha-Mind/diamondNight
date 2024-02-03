@@ -1,11 +1,12 @@
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
-import ScrollToTop from "@/elements/ScrollToTop/ScrollToTop";
+// import ScrollToTop from "@/elements/ScrollToTop/ScrollToTop";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
-const bodyFont = Inter({
+const bodyFont = Poppins({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -21,12 +22,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={bodyFont.className}>
         <ThemeProvider>
-          <main className="container">
-            <Navbar />
-            {children}
-            <ScrollToTop />
-            <Footer />
-          </main>
+          <AuthProvider>
+            <div className="mainContainer">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

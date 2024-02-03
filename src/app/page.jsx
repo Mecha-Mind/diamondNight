@@ -1,22 +1,23 @@
-import Image from 'next/image'
 import styles from './page.module.css'
-import Hero from '/public/hero.png'
-import Button from '@/elements/Button/Button'
+import Landing from '@/components/landing/Landing'
+import Testimonial from '@/components/testimonial/Testimonial'
+import Carousel from '@/components/carousel/Carousel'
+import Contact from '@/components/contact/Contact'
+import InfiniteScrollAnimation from '@/components/testi2/InfiniteScrollAnimation'
+import AboutUs from '@/components/aboutUs/AboutUs'
+import Link from 'next/link'
+
 
 export default function Home() {
   return (
-    <section className={styles.container}>
-      {/* text side */}
-      <div className={styles.textSide}>
-        <h1 className={styles.title}>Better design for your digital products.</h1>
-        <p className={styles.desc}>Turning your Idea into Reality. We bring together the teams from the global tech industry.</p>
-        <Button url="/portfolio" title="Our works.." className={'ourWorkBtn'}/>
-        
-      </div>
-      {/* image side */}
-      <div className={styles.imageSide}>
-        <Image src={Hero} alt='Hero' className={styles.img} priority></Image>
-      </div>
+    <section className={styles.main}>
+      <Landing/>
+      <AboutUs/>
+      <Link href={"/about"}>About</Link>
+      <Testimonial/>
+      <Carousel/>
+      <Contact/>
+      <InfiniteScrollAnimation/>
     </section>
   )
 }

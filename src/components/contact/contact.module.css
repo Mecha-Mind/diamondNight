@@ -1,0 +1,121 @@
+.contact {
+  background-color: #eee;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 50px
+}
+
+.contact .content {
+  padding: 20px;
+  width: 20rem;
+}
+.contact .content .article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #2c2c6c;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 20px;
+  transition: .4s;
+}
+.contact .content .article:hover {
+  border: 1px solid #2c2c6c;
+  background: transparent;
+  color: #2c2c6c;
+}
+.contact .content .article:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contact .content .article .icon {
+  width: 22px;
+  height: 22px;
+}
+.contact .content .article h3 {
+  font-size: 15px;
+}
+.contact form {
+  flex: 1;
+  padding: 30px;
+  border-radius: 8px;
+  min-width: 300px;
+  background-color: #2c2c6c;
+}
+.formGroup {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.contact h1 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup .input {
+  width: 100%;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid;
+  border-color: transparent transparent #4db5ff transparent;
+  border-radius: 0.25rem;
+  text-indent: 3px;
+  outline: none;
+  transition: .4s;
+}
+
+.formGroup .input:hover, 
+.formGroup .input::selection, 
+.formGroup .input:focus {
+
+  border: 1px solid #4db5ff;
+}
+
+.error {
+  border-color: red;
+}
+
+.errorMessage {
+  display: block;
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.contact form button {
+  background-color: #3f51b582;
+  padding: 0.7rem 1.7rem;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .4s;
+  font-weight: bold;
+  color: #2196F3;
+  border: none;
+  margin-top: 10px;
+}
+.contact form button:hover {
+  background-color: #4db5ff;
+  color:#FFF;
+}
+
+#submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 150px);
+}
